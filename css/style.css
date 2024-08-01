@@ -1,0 +1,142 @@
+.col-6{
+    width: 55%;
+    background-color: #f5f5dc;
+    border: 3px solid brown;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.logo{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: auto;
+    margin-right: auto;
+                        
+}
+.img1{
+    width: 70px;
+    height: 70px;
+}
+.space{
+    justify-content: space-between;
+    display: flex;
+}
+#s_no{
+    color: red;
+    font-weight: bold;
+}
+.text{
+    text-align: center;
+    margin-top: 10px;
+    color: brown;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50% ; 
+    text-align: center;
+    margin-top: 10px;
+}
+.grid_2{
+    display: grid;
+    grid-template-columns: 25% 25% 50% ; 
+    text-align: center;
+}
+.inner_grid{
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: 63px 68px 59px; 
+    text-align: center;
+    margin-left: -1.5px;
+    margin-bottom: -1.5px;
+}
+.grid_3{
+    display: grid;
+    grid-template-columns: 50% 8% 27% 15% ; 
+    text-align: center;
+}
+.border_col{
+    border: 2px solid rgb(236, 99, 54);
+    justify-content: space-around;
+    margin-top: -1.5px;
+    width: 100%;
+    align-items: center;
+    
+    /* align-self: center; */
+    display: flex;
+
+}
+.no_border_col{
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+}
+p{
+    margin-bottom: 0px;
+    padding: 2px;
+    /* font-size: 10px; */
+}
+
+table{
+    width: 100%;
+    margin-top: -1.5px;
+}
+.subject_code{
+    margin-top: 10px;
+    display: block;
+    padding-right: 80px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-left: 10px;
+}
+.subject_name{
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.text_color{
+    color: brown;
+    font-weight: 500;
+}
+.sub_grid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.top{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.total{
+    margin-left: 10px;
+    color: brown;
+    font-weight: 500;
+}
+.span_clr{
+    color: black;
+}
+#total_word{
+    font-weight: bold;
+    /* position: relative; */
+    margin-left: 30px;
+}
+
+th{
+    border: 2px solid rgb(236, 99, 54);
+    border-collapse: collapse;
+    color: brown;
+}
+table,td,tr{
+    border: 2px solid rgb(236, 99, 54);
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+}
+.signature{
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 65% 35%;
+}
