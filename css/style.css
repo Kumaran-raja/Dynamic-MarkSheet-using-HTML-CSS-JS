@@ -426,18 +426,20 @@ table,td,tr{
         width: 100%;
         margin-top: -1.5px;
     }
-    .subject_code{
+      .subject_code{
         margin-top: 10px;
         display: block;
         padding-right: 80px;
         font-weight: bold;
         margin-left: auto;
+        font-size: 15px;
         margin-left: 10px;
     }
     .subject_name{
         margin-right: 30px;
         margin-top: 10px;
         margin-right: auto;
+        font-size: 15px;
         font-weight: bold;
     }
 
