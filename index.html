@@ -12,10 +12,8 @@
             background: url(images/HINDUSTHAN\ \(1\).png);
         }
     </style>
-</head>
-<style>
     
-</style>
+</head>
 <body>
     
     <section>
@@ -30,8 +28,7 @@
                         <img class="logo img1" src="images/logo.jpeg" alt="">
                         <img class="img1" src="images/QR.png" alt="">
                     </div>
-                    <!-- <h4 class="text">Hindusthan College of Engineering And Technology</h4> -->
-                     <img src="images/name.png" alt="" class="img_name">
+                    <img src="images/name.png" alt="" class="img_name">
                     <p class="text text1">Approved by AICTE,New Delhi and Accrediated with 'A' Grade by NAAC <br>
                     (An Autonomouns Institution, Affliated to Anna University, Chennai) <br>Coimbatore - 641 032</p>
                     <h2 class="text">Annual Statement of Marks</h2>
@@ -348,20 +345,21 @@
             
         }
 
+     
         // Candidate Name ,Course Name,Register Number and Enrollment Number value are get from the user
-        let name=prompt("Enter Your Full Name here With Initial This name Placed in Your Marksheet")
+        let name=userDetails("Enter Your Full Name here With Initial This name Placed in Your Marksheet")
+
         let candidate_name=document.getElementById("candidate_name");
         candidate_name.innerText=name;
-
-        let course=prompt("Enter Your Course Name For Example(B.Tech Information Technology)")
+        let course=userDetails("Enter Your Course Name For Example(B.Tech Information Technology)")
         let course_name=document.getElementById("course_name");
         course_name.innerText=course;
 
-        let reg_no=prompt("Enter Your Register Number")
+        let reg_no=userDetails("Enter Your Register Number")
         let register_number=document.getElementById("reg_number");
         register_number.innerText=reg_no;
 
-        let enroll_no=prompt("Enter Your Enrollment Number")
+        let enroll_no=userDetails("Enter Your Enrollment Number")
         let enroll_number=document.getElementById("Enroll_number");
         enroll_number.innerText=enroll_no;
 
@@ -379,24 +377,27 @@
         // get mark input from user
     
         for (let i = 0; i < 8; i++) {
-            let input = prompt("Enter Theory Mark Here");
-            let practicalInput = prompt("Enter Practical Mark Here");
+            let input = theoryMark("Enter Theory Mark Here");
+            let practicalInput = practicalMark("Enter Practical Mark Here");
+           
             
-            if (input !== null && practicalInput !== null) {
-                let theoryMark = parseInt(input) || 0;
-                let practicalMark = parseInt(practicalInput) || 0;
+            if (input != null || practicalInput != null) {
+                let theoryMark = parseInt(input);
+                let practicalMark = parseInt(practicalInput);
                 let totalMark = theoryMark + practicalMark;
-    
                 let t_mark = document.getElementById(theoryMarkIds[i]);
                 let p_mark = document.getElementById(practicalMarkIds[i]);
                 let total_mark = document.getElementById(totalMarkIds[i]);
-    
                 t_mark.innerText = theoryMark;
                 p_mark.innerText = practicalMark;
                 total_mark.innerText = totalMark;
     
                 sum += totalMark;
             }
+            else{
+                alert("error")
+            }
+            
         }
     
         let grand_total = document.getElementById("grand_total");
@@ -410,10 +411,8 @@
             const words = ["ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"];
             return sum.toString().split('').map(digit => words[digit]).join(' ');
         }
-
         let total_in_word=document.getElementById("total_word");
         total_in_word.innerText=mark_in_word;
-
         function getCurrentDate() {
             const today = new Date();
             const day = String(today.getDate()).padStart(2, '0');
@@ -458,8 +457,40 @@
         } else if(Percentage>=50){
             grade.innerText="C"
         }else{
-            grade.innerText="F"
+            grade.innerText="RA"
         }
+
+        function userDetails(AlertMessage){
+            let details;
+            do{
+                details=prompt(AlertMessage).trim();
+            }while(!details);
+            return details;
+        }
+
+        function theoryMark(theory){
+            let mark;
+            mark=prompt(theory);
+            mark = parseInt(mark);
+            while (isNaN(mark) || mark < 0 || mark > 75){
+                mark=prompt("Enter Theory Mark Out of 75");
+                mark = parseInt(mark);
+            }
+            return mark;
+        }
+
+        function practicalMark(theory){
+            let mark;
+            mark=prompt(theory);
+            mark = parseInt(mark);
+            while (isNaN(mark) || mark < 0 || mark > 25){
+                mark=prompt("Enter Practical Mark Out of 25");
+                mark = parseInt(mark);
+            } 
+            return mark;
+        }
+
+
     </script>
  
     
